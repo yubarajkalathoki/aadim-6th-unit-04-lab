@@ -2,21 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.aadimcollege.controller;
+package com.aadimcollege.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author yubaraj
  */
-public class CookieServlet1 extends HttpServlet {
+public class SessionServlet1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,10 +30,15 @@ public class CookieServlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        Cookie c = new Cookie("username", "Sajan");
-        response.addCookie(c);
-        
-        response.sendRedirect("./CookieServlet2");
+        try (PrintWriter out = response.getWriter()) {
+            String n = request.getParameter("userName");
+            out.print("Welcome " + n);
+            HttpSession session = request.getSession();
+            session.setAttribute("uname", n);
+            out.print("<br/><a href='SessionServlet2'>visit</a>");
+            out.close();
+
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

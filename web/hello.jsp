@@ -94,10 +94,8 @@ public static Connection getConnection() {
         
         <p/>
         
-        <a href="
-           <%= getConnection() %>
-           "> Click to test Database Connection</a>
-        
+        <a href="<%= 5+5 %>"> Click to test Database Connection</a>
+           <!--<a href="10">Click to test Database Connection</a>-->
         
         </body>
 </html>

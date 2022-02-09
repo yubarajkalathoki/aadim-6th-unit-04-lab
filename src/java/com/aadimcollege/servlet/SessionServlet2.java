@@ -2,21 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package com.aadimcollege.controller;
+package com.aadimcollege.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author yubaraj
  */
-public class CookieServlet2 extends HttpServlet {
+@WebServlet(name = "SessionServlet2", urlPatterns = {"/SessionServlet2"})
+public class SessionServlet2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,9 +32,13 @@ public class CookieServlet2 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        Cookie[] cookies = request.getCookies();
-        out.print("<h1>"+cookies[0].getValue()+"</h1");
+        try (PrintWriter out = response.getWriter()) {
+            HttpSession session = request.getSession(false);
+            String n = (String) session.getAttribute("uname");
+            out.print("Hello " + n);
+            out.close();
+
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

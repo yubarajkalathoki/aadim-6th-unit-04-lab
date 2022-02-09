@@ -2,27 +2,27 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>LoginController</servlet-name>
-        <servlet-class>com.aadimcollege.controller.LoginServlet</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.LoginServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SuccessServlet</servlet-name>
-        <servlet-class>com.aadimcollege.controller.SuccessServlet</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.SuccessServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>FailedServlet</servlet-name>
-        <servlet-class>com.aadimcollege.controller.FailedServlet</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.FailedServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CookieServlet1</servlet-name>
-        <servlet-class>com.aadimcollege.controller.CookieServlet1</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.CookieServlet1</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CookieServlet2</servlet-name>
-        <servlet-class>com.aadimcollege.controller.CookieServlet2</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.CookieServlet2</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SessionServlet1</servlet-name>
-        <servlet-class>com.aadimcollege.controller.SessionServlet1</servlet-class>
+        <servlet-class>com.aadimcollege.servlet.SessionServlet1</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DatabaseConnectionServlet</servlet-name>
@@ -62,6 +62,6 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>/hello.jsp</welcome-file>
+        <welcome-file>/createUserForm.jsp</welcome-file>
     </welcome-file-list>
 </web-app>
