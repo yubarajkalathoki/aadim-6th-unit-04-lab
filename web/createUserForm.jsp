@@ -50,7 +50,10 @@
             </table>
         </form>
         
-         
+        <p/>
+        <form action="UserListServlet" method="get">
+            <input type="submit" value="Display User List"/>
+        </form>
         
     </body>
 </html>

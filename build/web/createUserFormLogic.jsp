@@ -3,7 +3,7 @@
     Created on : Feb 4, 2022, 7:26:14 AM
     Author     : yubaraj
 --%>
-
+<%@ page errorPage="error.jsp" %>  
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
@@ -36,11 +36,11 @@
                 return cn;
             }
 
-
+            boolean created;
         %>
 
         <%
-            try {
+            
                 Connection cn = getConnection();
                 firstName = request.getParameter("firstName");
                 lastName = request.getParameter("lastName");
@@ -49,21 +49,24 @@
                 String insertQuery = "insert into user (first_name, last_name, address) values ('" + firstName + "', '" + lastName + "', '" + address + "')";
                 Statement stat = cn.createStatement();
                 stat.executeUpdate(insertQuery);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                created = true;
+            
 
-
+            if(created){
+            
         %>
 
+        
         <h2>User Created Successfully!</h2>
         
          <% 
-//             out.print("this is jsp comment") 
+             }else{
         
         %>
-        
-        
+        <h2>User Creation Failed!</h2>
+        <%
+            }
+        %>
         
     </body>
 </html>

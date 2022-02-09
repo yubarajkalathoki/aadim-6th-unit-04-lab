@@ -17,7 +17,7 @@ public class DatabaseConnection {
         String url;
         String con;
         try {
-            url = "jdbc:mysql://localhost:3306/test";
+            url = "jdbc:mysql://localhost:3306/aadim_6th_unit_04_lab";
             con = "com.mysql.jdbc.Driver";
             Class.forName(con);
             cn = DriverManager.getConnection(url, "root", "");
