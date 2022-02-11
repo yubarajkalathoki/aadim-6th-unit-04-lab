@@ -10,24 +10,42 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User List</title>
+        <style>
+            .odd{
+                background-color: #99ccff;
+            }
+            .even{
+                background-color: #ffcccc;
+            }
+        </style>
     </head>
     <body>
         <h1>User List</h1>
         <table>
             <tr>
-                <th>ID</th>
+                <th>SN</th>
                 <th>Full Name</th>
                 <th>Address</th>
                 <th>Action</th>
             </tr>
-            <sajan:forEach var="user" items="${userList}">
-                <tr>
-                <td>${user.id}</td>
-                <td>${user.firstName} ${user.firstName}</td>
+            <sajan:forEach var="user" items="${userList}" varStatus="loop">
+                <tr class="${loop.index % 2 == 0 ? 'even' : 'odd'}">
+                    <td><sajan:out value="${loop.index+1}"/></td>
+                <td>${user.firstName} ${user.lastName}</td>
                 <td>${user.address}</td>
                 <td>
-                    <a href="editUser">Edit</a>
-                    <a href="deleteUser">Delete</a>
+                    <a href="
+                       
+                       <sajan:url value="editUser.jsp">
+                           <sajan:param name="id" value="${user.id}"/>
+                       </sajan:url>
+                       
+                       ">Edit</a>
+                    <a href="
+                       <sajan:url value="deleteUser">
+                           <sajan:param name="id" value="${user.id}"/>
+                       </sajan:url>
+                       ">Delete</a>
                 </td>
             </tr>
             </sajan:forEach>

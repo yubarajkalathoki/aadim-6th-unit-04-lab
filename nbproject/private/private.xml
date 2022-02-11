@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/src/java/com/aadimcollege/database/DatabaseConnection.java</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/error.jsp</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/userList.jsp</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/src/java/com/aadimcollege/servlet/SuccessServlet.java</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/createUserFormLogic.jsp</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/createUserForm.jsp</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/hello.jsp</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/src/java/com/aadimcollege/servlet/UserListServlet.java</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/index.html</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/sessionDemo.html</file>
+            <file>file:/C:/Users/yubaraj/Documents/NetBeansProjects/aadim-6th-unit-04-lab/web/WEB-INF/web.xml</file>
+        </group>
     </open-files>
 </project-private>
